@@ -27,9 +27,17 @@
             </div>
         </div>
     </div>
+
     <div class="container body-content">
-        @RenderBody()
-        <hr />
+        <div class="row panel">
+            <div id="categories" class="col-xs-3">
+                Put Something here...
+            </div>
+            <div class="col-xs-8">
+                @RenderBody()
+            </div>
+        </div>
+      
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
