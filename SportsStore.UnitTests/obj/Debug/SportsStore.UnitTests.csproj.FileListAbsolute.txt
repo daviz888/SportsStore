@@ -58,3 +58,5 @@ C:\Users\lorna\source\repos\SportsStore\SportsStore.UnitTests\obj\Debug\SportsSt
 C:\Users\lorna\source\repos\SportsStore\SportsStore.UnitTests\obj\Debug\SportsStore.UnitTests.csproj.CopyComplete
 C:\Users\lorna\source\repos\SportsStore\SportsStore.UnitTests\obj\Debug\SportsStore.UnitTests.dll
 C:\Users\lorna\source\repos\SportsStore\SportsStore.UnitTests\obj\Debug\SportsStore.UnitTests.pdb
+C:\Users\Snitz\source\repos\SportsStore\SportsStore.UnitTests\obj\Debug\SportsStore.UnitTests.csprojAssemblyReference.cache
+C:\Users\Snitz\source\repos\SportsStore\SportsStore.UnitTests\obj\Debug\SportsStore.UnitTests.csproj.CoreCompileInputs.cache

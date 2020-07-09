@@ -36,6 +36,7 @@ namespace SportsStore.UnitTests
 
             // Act
             ProductsListViewModel result = (ProductsListViewModel)controller.List(2).Model;
+//            ProductsListViewModel result = (ProductsListViewModel)controller.List(null, 2).Model;
 
             // Assert
             Product[] prodArray = result.Products.ToArray();
