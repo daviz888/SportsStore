@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
+using Microsoft.CSharp.RuntimeBinder;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using SportsStore.Domain.Abstract;
@@ -163,30 +164,30 @@ namespace SportsStore.UnitTests
             Assert.AreEqual(results[2], "Plums");
         }
 
-        //[TestMethod]
-        //public void Indicates_Selected_Category()
-        //{
+        [TestMethod]
+        public void Indicates_Selected_Category()
+        {
 
-        //    // Arrange
-        //    // - create the mock repository
-        //    Mock<IProductRepository> mock = new Mock<IProductRepository>();
-        //    mock.Setup(m => m.Products).Returns(new Product[] {
-        //        new Product {ProductID = 1, Name = "P1", Category = "Apples"},
-        //        new Product {ProductID = 4, Name = "P2", Category = "Oranges"},
-        //    });
+            // Arrange
+            // - create the mock repository
+            Mock<IProductRepository> mock = new Mock<IProductRepository>();
+            mock.Setup(m => m.Products).Returns(new Product[] {
+                new Product {ProductID = 1, Name = "P1", Category = "Apples"},
+                new Product {ProductID = 4, Name = "P2", Category = "Oranges"},
+            });
 
-        //    // Arrange - create the controller 
-        //    NavController target = new NavController(mock.Object);
+            // Arrange - create the controller 
+            NavController target = new NavController(mock.Object);
 
-        //    // Arrange - define the category to selected
-        //    string categoryToSelect = "Apples";
+            // Arrange - define the category to selected
+            string categoryToSelect = "Apples";
 
-        //    // Action
-        //    string result = target.Menu(categoryToSelect).ViewBag.SelectedCategory;
+            // Action
+            string result = target.Menu(categoryToSelect).ViewBag.SelectedCategory;          
 
-        //    // Assert
-        //    Assert.AreEqual(categoryToSelect, result);
-        //}
+            // Assert
+            Assert.AreEqual(categoryToSelect, result);
+        }
 
         [TestMethod]
         public void Generate_Category_Specific_Product_Count()
