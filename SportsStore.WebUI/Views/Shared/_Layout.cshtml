@@ -19,10 +19,8 @@
                 @Html.ActionLink("Sports Store", "List", "Product", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Product", "List", "Product")</li>
-                    <li>@Html.ActionLink("About", "About", "Product")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Product")</li>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.Action("Summary", "Cart")</li>
                 </ul>
             </div>
         </div>
