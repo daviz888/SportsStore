@@ -27,7 +27,7 @@ namespace SportsStore.WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (authProvider.Authenticate(model.Username, model.Password))
+                if (authProvider.Authenticate(model.UserName, model.Password))
                 {
                     return Redirect(returnUrl ?? Url.Action("Index", "Admin"));
                 }
@@ -36,6 +36,10 @@ namespace SportsStore.WebUI.Controllers
                     ModelState.AddModelError("", "Incorrect username and password");
                     return View();
                 }
+            }
+            else
+            {
+                return View();
             }
         }
     }

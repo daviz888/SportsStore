@@ -42,7 +42,6 @@ C:\Users\lorna\source\repos\SportsStore\SportsStore.Domain\bin\Debug\System.Web.
 C:\Users\lorna\source\repos\SportsStore\SportsStore.Domain\bin\Debug\System.Web.WebPages.xml
 C:\Users\lorna\source\repos\SportsStore\SportsStore.Domain\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Users\lorna\source\repos\SportsStore\SportsStore.Domain\bin\Debug\System.Web.WebPages.Razor.xml
-C:\Users\lorna\source\repos\SportsStore\SportsStore.Domain\obj\Debug\SportsStore.Domain.csprojAssemblyReference.cache
 C:\Users\lorna\source\repos\SportsStore\SportsStore.Domain\obj\Debug\SportsStore.Domain.csproj.CoreCompileInputs.cache
 C:\Users\lorna\source\repos\SportsStore\SportsStore.Domain\obj\Debug\SportsStore.Domain.csproj.CopyComplete
 C:\Users\lorna\source\repos\SportsStore\SportsStore.Domain\obj\Debug\SportsStore.Domain.dll

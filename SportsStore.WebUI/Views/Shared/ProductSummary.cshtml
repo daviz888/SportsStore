@@ -1,21 +1,27 @@
 ﻿
 @model SportsStore.Domain.Entities.Product
 
-<div class="well">
-    <h3>
-        <strong>@Model.Name</strong>
-        <span class="pull-right label-primary">@Model.Price.ToString("c")</span> 
-    </h3>
-
-    @using (Html.BeginForm("AddToCart", "Cart"))
-    {
-        <div class="pull-right">
-            @Html.HiddenFor(x => x.ProductID)
-            @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
-            <input type="submit" class="btn btn-success" value="Add to Cart" />
-        </div>
-    }
-
-    <span class="lead"> @Model.Description</span>
-</div>
+    <div class="well">
+        @if (Model.ImageData != null)
+        {
+            <div class="pull-left" id="product-icon">
+                <img class="img-thumbnail" width="75" height="75"
+                     src="@Url.Action("GetImage", "Product",
+                                new { Model.ProductID })" />
+            </div>
+        }
+        <h3>
+            <strong>@Model.Name</strong>
+            <span class="pull-right label-primary">@Model.Price.ToString("c")</span>
+        </h3>
+        @using (Html.BeginForm("AddToCart", "Cart"))
+        {
+            <div class="pull-right">
+                @Html.HiddenFor(x => x.ProductID)
+                @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                <input type="submit" class="btn btn-success" value="Add to Cart" />
+            </div>
+        }
+        <span class="lead"> @Model.Description</span>
+    </div>
 

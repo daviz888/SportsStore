@@ -55,3 +55,9 @@ textarea {
 .validation-summary-valid {
     display: none;
 }
+
+#product-icon {
+    margin-right: 10px;
+}
+
+
