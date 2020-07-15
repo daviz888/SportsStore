@@ -1,5 +1,6 @@
 ﻿using SportsStore.Domain.Abstract;
 using SportsStore.Domain.Entities;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -11,6 +12,18 @@ namespace SportsStore.WebUI.Controllers
     {
         private IProductRepository repository;
 
+        private void GetCategory()
+        {
+            var CategoryList = new List<string>();
+
+            var categories = repository.Products.OrderBy(c => c.Category)
+                .Select(c => c.Category);
+
+            CategoryList.AddRange(categories);
+
+            ViewBag.Categories = new SelectList(CategoryList.Distinct());
+
+        }
         public AdminController(IProductRepository repo)
         {
             repository = repo;
@@ -23,11 +36,13 @@ namespace SportsStore.WebUI.Controllers
 
         public ViewResult Create()
         {
+            GetCategory();
             return View("Edit", new Product());
         }
 
         public ViewResult Edit(int productId)
         {
+            GetCategory();
             Product product = repository.Products
                 .FirstOrDefault(p => p.ProductID == productId);
             return View(product);
@@ -36,6 +51,8 @@ namespace SportsStore.WebUI.Controllers
         [HttpPost]
         public ActionResult Edit(Product product, HttpPostedFileBase image = null)
         {
+            GetCategory();
+
             if (ModelState.IsValid)
             {
                 if (image != null)
@@ -67,5 +84,6 @@ namespace SportsStore.WebUI.Controllers
             return RedirectToAction("Index");
 
         }
+
     }
 }

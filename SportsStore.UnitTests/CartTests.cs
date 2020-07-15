@@ -7,15 +7,12 @@ using SportsStore.WebUI.Controllers;
 using System.Web.Mvc;
 using SportsStore.WebUI.Models;
 
-namespace SportsStore.UnitTests
-{
+namespace SportsStore.UnitTests {
     [TestClass]
-    public class CartTests
-    {
+    public class CartTests {
 
         [TestMethod]
-        public void Can_Add_New_Lines()
-        {
+        public void Can_Add_New_Lines() {
 
             // Arrange - create some test products
             Product p1 = new Product { ProductID = 1, Name = "P1" };
@@ -36,8 +33,7 @@ namespace SportsStore.UnitTests
         }
 
         [TestMethod]
-        public void Can_Add_Quantity_For_Existing_Lines()
-        {
+        public void Can_Add_Quantity_For_Existing_Lines() {
 
             // Arrange - create some test products
             Product p1 = new Product { ProductID = 1, Name = "P1" };
@@ -59,8 +55,7 @@ namespace SportsStore.UnitTests
         }
 
         [TestMethod]
-        public void Can_Remove_Line()
-        {
+        public void Can_Remove_Line() {
 
             // Arrange - create some test products
             Product p1 = new Product { ProductID = 1, Name = "P1" };
@@ -84,8 +79,7 @@ namespace SportsStore.UnitTests
         }
 
         [TestMethod]
-        public void Calculate_Cart_Total()
-        {
+        public void Calculate_Cart_Total() {
 
             // Arrange - create some test products
             Product p1 = new Product { ProductID = 1, Name = "P1", Price = 100M };
@@ -105,8 +99,7 @@ namespace SportsStore.UnitTests
         }
 
         [TestMethod]
-        public void Can_Clear_Contents()
-        {
+        public void Can_Clear_Contents() {
 
             // Arrange - create some test products
             Product p1 = new Product { ProductID = 1, Name = "P1", Price = 100M };
@@ -127,8 +120,7 @@ namespace SportsStore.UnitTests
         }
 
         [TestMethod]
-        public void Can_Add_To_Cart()
-        {
+        public void Can_Add_To_Cart() {
 
             // Arrange - create the mock repository
             Mock<IProductRepository> mock = new Mock<IProductRepository>();
@@ -151,8 +143,7 @@ namespace SportsStore.UnitTests
         }
 
         [TestMethod]
-        public void Adding_Product_To_Cart_Goes_To_Cart_Screen()
-        {
+        public void Adding_Product_To_Cart_Goes_To_Cart_Screen() {
             // Arrange - create the mock repository
             Mock<IProductRepository> mock = new Mock<IProductRepository>();
             mock.Setup(m => m.Products).Returns(new Product[] {
@@ -174,8 +165,7 @@ namespace SportsStore.UnitTests
         }
 
         [TestMethod]
-        public void Can_View_Cart_Contents()
-        {
+        public void Can_View_Cart_Contents() {
             // Arrange - create a Cart
             Cart cart = new Cart();
 
@@ -192,8 +182,7 @@ namespace SportsStore.UnitTests
         }
 
         [TestMethod]
-        public void Cannot_Checkout_Empty_Cart()
-        {
+        public void Cannot_Checkout_Empty_Cart() {
 
             // Arrange - create a mock order processor
             Mock<IOrderProcessor> mock = new Mock<IOrderProcessor>();
@@ -217,8 +206,7 @@ namespace SportsStore.UnitTests
         }
 
         [TestMethod]
-        public void Cannot_Checkout_Invalid_ShippingDetails()
-        {
+        public void Cannot_Checkout_Invalid_ShippingDetails() {
 
             // Arrange - create a mock order processor
             Mock<IOrderProcessor> mock = new Mock<IOrderProcessor>();
@@ -244,8 +232,7 @@ namespace SportsStore.UnitTests
         }
 
         [TestMethod]
-        public void Can_Checkout_And_Submit_Order()
-        {
+        public void Can_Checkout_And_Submit_Order() {
             // Arrange - create a mock order processor
             Mock<IOrderProcessor> mock = new Mock<IOrderProcessor>();
             // Arrange - create a cart with an item

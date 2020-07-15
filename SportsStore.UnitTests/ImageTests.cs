@@ -6,19 +6,15 @@ using SportsStore.WebUI.Controllers;
 using System.Linq;
 using System.Web.Mvc;
 
-namespace SportsStore.UnitTests
-{
+namespace SportsStore.UnitTests {
     [TestClass]
-    public class ImageTests
-    {
+    public class ImageTests {
 
         [TestMethod]
-        public void Can_Retrieve_Image_Data()
-        {
+        public void Can_Retrieve_Image_Data() {
 
             // Arrange - create a Product with image data
-            Product prod = new Product
-            {
+            Product prod = new Product {
                 ProductID = 2,
                 Name = "Test",
                 ImageData = new byte[] { },
@@ -29,7 +25,7 @@ namespace SportsStore.UnitTests
             Mock<IProductRepository> mock = new Mock<IProductRepository>();
             mock.Setup(m => m.Products).Returns(new Product[] {
                 new Product {ProductID = 1, Name = "P1"},
-                prod,
+                prod,                            
                 new Product {ProductID = 3, Name = "P3"}
             }.AsQueryable());
 
@@ -46,8 +42,7 @@ namespace SportsStore.UnitTests
         }
 
         [TestMethod]
-        public void Cannot_Retrieve_Image_Data_For_Invalid_ID()
-        {
+        public void Cannot_Retrieve_Image_Data_For_Invalid_ID() {
 
             // Arrange - create the mock repository
             Mock<IProductRepository> mock = new Mock<IProductRepository>();
