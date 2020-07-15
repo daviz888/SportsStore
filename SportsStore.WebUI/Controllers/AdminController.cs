@@ -17,7 +17,8 @@ namespace SportsStore.WebUI.Controllers
             var CategoryList = new List<string>();
 
             var categories = repository.Products.OrderBy(c => c.Category)
-                .Select(c => c.Category);
+                 .Select(c => c.Category);                
+                
 
             CategoryList.AddRange(categories);
 
@@ -36,13 +37,13 @@ namespace SportsStore.WebUI.Controllers
 
         public ViewResult Create()
         {
-            GetCategory();
+            //GetCategory();
             return View("Edit", new Product());
         }
 
         public ViewResult Edit(int productId)
         {
-            GetCategory();
+            //GetCategory();
             Product product = repository.Products
                 .FirstOrDefault(p => p.ProductID == productId);
             return View(product);
@@ -51,7 +52,7 @@ namespace SportsStore.WebUI.Controllers
         [HttpPost]
         public ActionResult Edit(Product product, HttpPostedFileBase image = null)
         {
-            GetCategory();
+            //GetCategory();
 
             if (ModelState.IsValid)
             {
@@ -68,6 +69,7 @@ namespace SportsStore.WebUI.Controllers
             else
             {
                 // There is something wrong with the data values
+                TempData["message"] = string.Format("{0} an error has been encountered.", product.Name);
                 return View(product);
             }
         }

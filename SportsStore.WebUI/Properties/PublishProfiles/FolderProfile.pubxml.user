@@ -203,10 +203,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/14/2020 21:36:30</publishTime>
     </File>
     <File Include="bin/SportsStore.WebUI.dll">
-      <publishTime>07/14/2020 21:36:31</publishTime>
+      <publishTime>07/15/2020 19:05:27</publishTime>
     </File>
     <File Include="bin/SportsStore.WebUI.pdb">
-      <publishTime>07/14/2020 21:36:31</publishTime>
+      <publishTime>07/15/2020 19:05:27</publishTime>
     </File>
     <File Include="bin/System.Runtime.CompilerServices.Unsafe.dll">
       <publishTime>07/13/2020 15:31:49</publishTime>
@@ -332,7 +332,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/14/2020 14:27:55</publishTime>
     </File>
     <File Include="Views/Admin/Edit.cshtml">
-      <publishTime>07/14/2020 21:20:14</publishTime>
+      <publishTime>07/15/2020 19:02:43</publishTime>
     </File>
     <File Include="Views/Admin/Index.cshtml">
       <publishTime>07/14/2020 16:33:32</publishTime>
