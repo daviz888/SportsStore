@@ -9,6 +9,6 @@ namespace SportsStore.Domain.Abstract
 
         void SaveProduct(Product product);
 
-        Product DeleteProduct(int productID);
+        Product DeleteProduct(int productId);
     }
 }
